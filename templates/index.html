@@ -1,11 +1,23 @@
 {% extends "base.html" %}
 
-{% block title %}
-Главная
-{% endblock %}
+{% block title %}Главная - The Sopranos{% endblock %}
 
 {% block content %}
-<h2>Главная страница</h2>
-<p>Это главная страница учебного Flask-приложения.</p>
-<p>Проект демонстрирует создание маршрутов, использование HTML-шаблонов и организацию простого многостраничного веб-сайта.</p>
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">The Sopranos</h1>
+        <p class="hero-quote">"Even a broken clock is right twice a day"</p>
+        <p class="hero-subtitle">Легендарный сериал о жизни мафиозной семьи</p>
+    </div>
+</section>
+
+<section class="intro">
+    <div class="container">
+        <h2>О чём этот сайт</h2>
+        <p>Этот проект посвящён одному из величайших сериалов в истории телевидения. 
+        История Тони Сопрано — босса мафии из Нью-Джерси, который пытается балансировать 
+        между криминальным бизнесом и семейной жизнью.</p>
+    </div>
+</section>
 {% endblock %}

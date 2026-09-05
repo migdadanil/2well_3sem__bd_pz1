@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    color: #F5E6E6;
+    background-color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* КНОПКА МУЗЫКИ */
+#music-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 12px 25px;
+    background: #722F37;
+    color: #F5E6E6;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(114, 47, 55, 0.4);
+}
+
+#music-toggle:hover {
+    background: #B89999;
+    color: #1a1a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(184, 153, 153, 0.5);
+}
+
+/* НАВИГАЦИЯ */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 26, 0.95);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 2px solid #B89999;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #B89999;
+    font-weight: 700;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-menu a {
+    color: #F5E6E6;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #B89999;
+}
+
+/* HERO СЕКЦИЯ С УТКАМИ */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('../images/ducks.jpg') center/cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    animation: fadeIn 2s ease;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    color: #B89999;
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.9);
+    letter-spacing: 5px;
+}
+
+.hero-quote {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #F5E6E6;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #F5E6E6;
+    opacity: 0.9;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* INTRO СЕКЦИЯ */
+.intro {
+    padding: 100px 20px;
+    background: #262626;
+    text-align: center;
+}
+
+.intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #B89999;
+    margin-bottom: 30px;
+}
+
+.intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #F5E6E6;
+}
+
+/* СТРАНИЦЫ КОНТЕНТА */
+.page-content {
+    padding: 150px 20px 100px;
+    background: #1a1a1a;
+    min-height: 100vh;
+}
+
+.page-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #B89999;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.content-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #F5E6E6;
+}
+
+.content-text p {
+    margin-bottom: 25px;
+}
+
+.content-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #B89999;
+    margin: 40px 0 20px;
+}
+
+.content-text ul {
+    margin-left: 30px;
+    margin-bottom: 25px;
+}
+
+.content-text li {
+    margin-bottom: 10px;
+}
+
+.tg-link {
+    color: #B89999;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.tg-link:hover {
+    color: #F5E6E6;
+}
+
+/* ФУТЕР */
+.footer {
+    background: #1a1a1a;
+    text-align: center;
+    padding: 30px;
+    border-top: 2px solid #B89999;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* АДАПТИВ */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-menu {
+        gap: 20px;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-quote {
+        font-size: 1.2rem;
+    }
+    
+    .page-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    #music-toggle {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+    }
+}
